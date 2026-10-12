@@ -1,0 +1,82 @@
+#api call for create user account
+###
+POST http://127.0.0.1:8000/v1/foods/signup/
+Content-Type: application/json
+
+{
+   "username":"user3",
+   "email":"user3@gmail.com",
+   "password":"Password@123"
+}
+
+#api call for generate token
+###
+POST http://127.0.0.1:8000/v1/foods/token/
+Content-Type: application/json
+
+{
+  "username":"user",
+  "password":"Password@123"
+}
+#api call for get current user
+###
+GET http://127.0.0.1:8000/v1/foods/me/
+Accept: application/json
+Authorization: Token f0a449fefb1dfc6e28382de24baf3f1bda7849e3
+
+
+#Foodlog end points
+
+#api call for list foodlogs
+###
+GET http://127.0.0.1:8000/v1/foods/foodlogs/
+Accept: application/json
+Authorization: Token f0a449fefb1dfc6e28382de24baf3f1bda7849e3
+
+
+#api call for create foodlog
+###
+POST http://127.0.0.1:8000/v1/foods/foodlogs/
+Content-Type: application/json
+Authorization:Token f0a449fefb1dfc6e28382de24baf3f1bda7849e3
+
+
+{
+    "title": "Egg",
+    "calorie": 105,
+    "meal_type": "SNACK",
+    "serving_size": "1 piece"
+}
+
+#api call for fetch foodlog
+###
+GET http://127.0.0.1:8000/v1/foods/foodlogs/4/
+Accept: application/json
+Authorization: Token f0a449fefb1dfc6e28382de24baf3f1bda7849e3
+
+#api call for update foodlog
+###
+PUT http://127.0.0.1:8000/v1/foods/foodlogs/5/
+Content-Type: application/json
+Authorization: Token f0a449fefb1dfc6e28382de24baf3f1bda7849e3
+
+{
+  "id": 3,
+  "title": "Dosa",
+  "calorie": 160,
+  "meal_type": "BF",
+  "serving_size": "3 piece",
+  "created_at": "2026-10-11T17:00:59.591340Z",
+  "owner": 1
+}
+
+#api call fro delete foodlog
+###
+DELETE http://127.0.0.1:8000/v1/foods/foodlogs/6/
+Accept: application/json
+Authorization: Token f0a449fefb1dfc6e28382de24baf3f1bda7849e3
+
+
+
+
+
