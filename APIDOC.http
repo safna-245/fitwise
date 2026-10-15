@@ -40,12 +40,11 @@ POST http://127.0.0.1:8000/v1/foods/foodlogs/
 Content-Type: application/json
 Authorization:Token f0a449fefb1dfc6e28382de24baf3f1bda7849e3
 
-
 {
-    "title": "Egg",
-    "calorie": 105,
-    "meal_type": "SNACK",
-    "serving_size": "1 piece"
+    "title": "chapati,Egg roast",
+    "calorie": 250,
+    "meal_type": "DINNER",
+    "serving_size": "2 piece"
 }
 
 #api call for fetch foodlog
@@ -76,6 +75,17 @@ DELETE http://127.0.0.1:8000/v1/foods/foodlogs/6/
 Accept: application/json
 Authorization: Token f0a449fefb1dfc6e28382de24baf3f1bda7849e3
 
+#api call for summary
+###
+GET http://127.0.0.1:8000/v1/foods/summary/
+Accept: application/json
+Authorization: Token f0a449fefb1dfc6e28382de24baf3f1bda7849e3
+
+#api plan for dietplan
+###
+GET http://127.0.0.1:8000/v1/foods/diet_plan/
+Accept: application/json
+Authorization: Token f0a449fefb1dfc6e28382de24baf3f1bda7849e3
 
 
 
